@@ -5,21 +5,33 @@ source("R/functions.R")
 
 list(
   targets::tar_target(ons_shp, neighbourhoodstudy::ons_gen3_shp),
-  targets::tar_target(phhs, load_big_phhs(cds = c("3501","3502","3506","3507","3509","3547"), ons_shp = ons_shp)),
-  targets::tar_target(foodspace, load_ontario_foods(foodspace_filename = "data/Food_Environment_Analyses_pointdata_Shelley2024.csv",
-                                                                ontario_shp_filename ="~/datascience/data/spatial/lpr_000a21a_e/lpr_000a21a_e.shp")),
+  targets::tar_target(phhs, load_big_phhs(cds = c("3501", "3502", "3506", "3507", "3509", "3547"), ons_shp = ons_shp)),
+  targets::tar_target(foodspace, load_ontario_foods(
+    foodspace_filename = "data/Food_Environment_Analyses_pointdata_Shelley2024.csv",
+    ontario_shp_filename = "~/datascience/data/spatial/lpr_000a21a_e/lpr_000a21a_e.shp"
+  )),
   targets::tar_target(supermkt_isos, calculate_isochrones(dplyr::filter(foodspace, type == "supermarket"))),
+  targets::tar_target(rural_cov, get_coverage_one(phhs, supermkt_isos, NA, "rural")),
+  targets::tar_target(urban_cov, get_coverage_one(phhs, supermkt_isos, NA, "urban")),
+  targets::tar_target(suburban_cov, get_coverage_one(phhs, supermkt_isos, NA, "suburban")),
+  targets::tar_target(town_cov, get_coverage_one(phhs, supermkt_isos, NA, "town")),
+  targets::tar_target(all_cov, dplyr::bind_rows(rural_cov, urban_cov, town_cov, suburban_cov)),
+  targets::tar_target(save, {
+    readr::write_csv(all_cov, paste0("output/supermarket-coverage-", Sys.Date(), ".csv"))
+    TRUE
+  }),
 
-targets::tar_target(rural_cov, get_coverage_one(phhs, supermkt_isos, NA, "rural")),
-targets::tar_target(urban_cov, get_coverage_one(phhs, supermkt_isos, NA, "urban")),
-targets::tar_target(suburban_cov, get_coverage_one(phhs, supermkt_isos, NA, "suburban")),
-targets::tar_target(town_cov, get_coverage_one(phhs, supermkt_isos, NA, "town")),
-
-targets::tar_target(all_cov, dplyr::bind_rows(rural_cov, urban_cov, town_cov, suburban_cov)),
-targets::tar_target(save, {
-  readr::write_csv(all_cov, paste0("output/supermarket-coverage-",Sys.Date(),".csv"))
-  TRUE
-}),
-
-NULL
+  # analysis 2: coverage of 2 or more grocers
+  targets::tar_target(
+    grocer_isos,
+    calculate_isochrones(dplyr::filter(
+      foodspace,
+      type %in% c("grocery") |
+        subtype %in% c("health_food", "fruit_vegetable_market", "cultural_grocer")
+    )) |>
+      dplyr::bind_rows(supermkt_isos) |>
+      sf::st_as_sf() |>
+      dplyr::left_join(foodspace, by = "new_UID")
+  ),
+  NULL
 )

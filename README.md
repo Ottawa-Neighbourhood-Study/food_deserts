@@ -24,7 +24,7 @@ Q2: What percentage of households in each neighbourhood live within 10 mins walk
     Cutoff Distances to be used for RFEI (based off neighbourhood type)
         1. Urban: within 800m or 10 minute walk
         2. Suburban: within 5km or 10 minute drive
-        3. Urban: within 16km or 15 minute drive
+        3. Rural: within 16km or 15 minute drive
         4. Town: within 5 km or 10 minute drive
 
 • For each origin (DB centroid snapped to road network?)

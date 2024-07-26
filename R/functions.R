@@ -136,7 +136,8 @@ load_big_phhs <- function(cds = c("3501", "3502", "3506", "3507", "3509", "3547"
 # get neighbourhood-level coverage of population within travel distance
 # of 2 grocers
 # input set of phhs and tibble of isochrones
-get_phh_grocer_coverage <- function(phhs, grocer_isos) {
+get_hood_grocer_coverage <- function(phhs, grocer_isos) {
+  grocer_isos <- sf::st_make_valid(grocer_isos)
   results <- dplyr::tibble()
 
   for (rurality_foranalysis in c("rural", "town", "suburban", "urban")) {

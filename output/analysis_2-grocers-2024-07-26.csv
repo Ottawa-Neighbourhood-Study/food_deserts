@@ -1,0 +1,297 @@
+new_UID,rowid_orig_pull,name,address,type,subtype,note_from_open_streetmap_pull,date_pulled,date_validated,lon,lat,RFEI
+840,3074,Farm Boy,193 Metcalfe Street,supermarket,large,3666245425,2024-06-20,june_july_2024,-75.6933872,45.418746,healthy
+6512,3075,Farm Boy,317 McRae Avenue K1Z 5T9,supermarket,large,4260754002,2024-06-20,june_july_2024,-75.7499293,45.3962011,healthy
+8882,3076,Farm Boy,585 Montreal Road,supermarket,large,68586262,2024-06-20,june_july_2024,-75.64471211,45.44310741,healthy
+4363,3077,Farm Boy,1493 Richmond Road,supermarket,large,68587871,2024-06-20,june_july_2024,-75.79153514,45.36294349,healthy
+8278,3078,Farm Boy,3033 Woodroffe Avenue K2G 6H2,supermarket,large,223318552,2024-06-20,june_july_2024,-75.7240713,45.28860228,healthy
+9321,3079,Farm Boy,6315 Hazeldean Road,supermarket,large,233809970,2024-06-20,june_july_2024,-75.941683,45.26645782,healthy
+8793,3080,Farm Boy,457 Hazeldean Road,supermarket,large,233810089,2024-06-20,june_july_2024,-75.88798621,45.2994728,healthy
+580,3081,Farm Boy,3035 St. Joseph Boulevard,supermarket,large,299394467,2024-06-20,june_july_2024,-75.51326861,45.47773405,healthy
+6062,3082,Farm Boy,2030 Tenth Line Road,supermarket,large,471898477,2024-06-20,june_july_2024,-75.48788658,45.45830191,healthy
+8530,3083,Farm Boy,2950 Bank Street,supermarket,large,473049148,2024-06-20,june_july_2024,-75.62601699,45.34562928,healthy
+1157,3084,Farm Boy,1581 Greenbank Road K2C 3H2,supermarket,large,478374551,2024-06-20,june_july_2024,-75.74700487,45.27417346,healthy
+1448,3085,Farm Boy,499 Terry Fox Drive K2T 1H7,supermarket,large,567230351,2024-06-20,june_july_2024,-75.92163861,45.3107661,healthy
+540,3086,Farm Boy,1642 Merivale Road,supermarket,large,573225445,2024-06-20,june_july_2024,-75.73228145,45.34645428,healthy
+2043,3087,Farm Boy,1500 Bank Street K1H 7Z1,supermarket,large,576873991,2024-06-20,june_july_2024,-75.67026381,45.38141287,healthy
+5486,3088,Farm Boy,50 Rideau Street,supermarket,large,651371863,2024-06-20,june_july_2024,-75.69283663,45.42542361,healthy
+7766,3089,Farm Boy,NA,supermarket,large,755770982,2024-06-20,june_july_2024,-74.73285661,45.02790328,healthy
+3511,3090,Farm Boy,820 Belfast Road,supermarket,large,874937402,2024-06-20,june_july_2024,-75.63789726,45.41259558,healthy
+7384,3182,Food Basics,NA,supermarket,large,471051653,2024-06-20,june_july_2024,-74.7052784,45.0246332,healthy
+475,3183,Food Basics,NA,supermarket,large,2135640241,2024-06-20,june_july_2024,-77.0831066,45.8202896,healthy
+8129,3184,Food Basics,NA,supermarket,large,2607297211,2024-06-20,june_july_2024,-76.014631,44.88201,healthy
+6941,3185,Food Basics,"1200 Highway 15, Kingston K7K 7J8",supermarket,large,6156428122,2024-06-20,june_july_2024,-76.4511368,44.2704312,healthy
+3908,3186,Food Basics,1670 Heron Road,supermarket,large,68586373,2024-06-20,june_july_2024,-75.64319951,45.37936033,healthy
+9821,3187,Food Basics,667 Kirkwood Avenue,supermarket,large,112013387,2024-06-20,june_july_2024,-75.73887612,45.38638241,healthy
+2844,3188,Food Basics,1465 Merivale Road K2E 5N9,supermarket,large,143444559,2024-06-20,june_july_2024,-75.73294583,45.36043079,healthy
+7934,3189,Food Basics,3049 Jefferson Drive,supermarket,large,187777761,2024-06-20,june_july_2024,-75.70413323,44.59853641,healthy
+2019,3190,Food Basics,2615 County Road 43,supermarket,large,229189725,2024-06-20,june_july_2024,-75.65934528,45.01996073,healthy
+6662,3191,Food Basics,"3090 County Road 17, Rockland K4K 1V5",supermarket,large,233061563,2024-06-20,june_july_2024,-75.30179565,45.5481329,healthy
+2024,3192,Food Basics,150 Katimavik Road,supermarket,large,233577107,2024-06-20,june_july_2024,-75.89564455,45.3126793,healthy
+8003,3193,Food Basics,1021 Cyrville Road K1J 7S3,supermarket,large,244243181,2024-06-20,june_july_2024,-75.6365959,45.4267042,healthy
+10164,3194,Food Basics,5703 Hazeldean Road,supermarket,large,471920113,2024-06-20,june_july_2024,-75.91355763,45.28518094,healthy
+9990,3195,Food Basics,900 Greenbank Road K2J 1S8,supermarket,large,478977135,2024-06-20,june_july_2024,-75.7562589,45.28434652,healthy
+234,3196,Food Basics,3712 Innes Road K1W 0C8,supermarket,large,484828775,2024-06-20,june_july_2024,-75.51723404,45.44959128,healthy
+5573,3197,Food Basics,NA,supermarket,large,601845334,2024-06-20,june_july_2024,-74.75127298,45.02429692,healthy
+8363,3205,Foodland,NA,supermarket,large,1401843040,2024-06-20,june_july_2024,-77.1116306,45.554408,healthy
+723,3206,Foodland,337 Hastings Street North,supermarket,large,2392280688,2024-06-20,june_july_2024,-77.8584191,45.0834258,healthy
+4335,3207,Foodland,12015 County Road 31,supermarket,large,2608302415,2024-06-20,june_july_2024,-75.3723471,45.0875471,healthy
+9383,3208,Foodland,NA,supermarket,large,3470380002,2024-06-20,june_july_2024,-75.3163511,44.8491406,healthy
+3906,3209,Foodland,NA,supermarket,large,3715727108,2024-06-20,june_july_2024,-74.9894867,44.9968651,healthy
+5064,3210,Foodland,NA,supermarket,large,6007222109,2024-06-20,june_july_2024,-74.6499089,45.5256937,healthy
+2926,3211,Foodland,"327 Main Street, Mattawa P0H 1V0",supermarket,large,8388796192,2024-06-20,june_july_2024,-78.7050103,46.3182528,healthy
+4387,3212,Foodland,NA,supermarket,large,73416565,2024-06-20,june_july_2024,-77.15961437,44.73382245,healthy
+8351,3213,Foodland,NA,supermarket,large,290898298,2024-06-20,june_july_2024,-76.59357192,44.4139958,healthy
+2436,3214,Foodland,NA,supermarket,large,363645808,2024-06-20,june_july_2024,-76.69487746,44.46691476,healthy
+9616,3215,Foodland,"41 King Street, Delta",supermarket,large,488856559,2024-06-20,june_july_2024,-76.1212091,44.6115509,healthy
+6449,3216,Foodland,5669 Osgoode Main Street,supermarket,large,533298640,2024-06-20,june_july_2024,-75.60201002,45.14966793,healthy
+9625,3217,Foodland,"148 Craig Street, Russell",supermarket,large,605312783,2024-06-20,june_july_2024,-75.37388912,45.25703695,healthy
+3741,3218,Foodland,NA,supermarket,large,679592602,2024-06-20,june_july_2024,-78.2252959,45.03669503,healthy
+2041,3219,Foodland,6045 Bank Street,supermarket,large,762479340,2024-06-20,june_july_2024,-75.55471364,45.26336717,healthy
+4367,3252,FreshCo,"350 Spence Avenue, Hawkesbury K6A 2Z6",supermarket,large,7081680189,2024-06-20,june_july_2024,-74.612731,45.5980867,healthy
+7873,3253,FreshCo,320 McArthur Avenue K1L 5G2,supermarket,large,16386340,2024-06-20,june_july_2024,-75.65385591,45.43026662,healthy
+5429,3254,FreshCo,110 Lansdowne Avenue,supermarket,large,195440529,2024-06-20,june_july_2024,-76.13957213,45.13401876,healthy
+3689,3255,FreshCo,4750 Bank Street K1T 0K8,supermarket,large,219306015,2024-06-20,june_july_2024,-75.59580412,45.31908795,healthy
+2670,3256,FreshCo,1595 Merivale Road K2G 3J4,supermarket,large,551780127,2024-06-20,june_july_2024,-75.73273542,45.35278589,healthy
+5941,3257,FreshCo,350 Cresthaven Drive K2G 4P4,supermarket,large,574589080,2024-06-20,june_july_2024,-75.70993037,45.27385791,healthy
+7824,3258,FreshCo,2150 Robertson Road,supermarket,large,581659417,2024-06-20,june_july_2024,-75.83546368,45.31942291,healthy
+3139,3259,FreshCo,525 Ninth Street East,supermarket,large,684880572,2024-06-20,june_july_2024,-74.72389826,45.03225881,healthy
+1632,3260,FreshCo,"920 Watters Road, Ottawa K4A 0B4",supermarket,large,1202540395,2024-06-20,june_july_2024,-75.47485492,45.4829575,healthy
+1342,4934,Loblaws,100 McArthur Avenue,supermarket,large,31814089,2024-06-20,june_july_2024,-75.66466031,45.4294323,healthy
+4667,4935,Loblaws,1460 Merivale Road,supermarket,large,68608768,2024-06-20,june_july_2024,-75.73544262,45.36191342,healthy
+6577,4936,Loblaws,2065 Robertson Road,supermarket,large,68658115,2024-06-20,june_july_2024,-75.83245761,45.32443469,healthy
+6060,4937,Loblaws,20 Isabella Street,supermarket,large,68710011,2024-06-20,june_july_2024,-75.68580199,45.41048421,healthy
+7479,4938,Loblaws,2085 Carling Avenue,supermarket,large,133979838,2024-06-20,june_july_2024,-75.76777427,45.3724318,healthy
+975,4939,Loblaws,200 Earl Grey Drive K2T 1B6,supermarket,large,144453739,2024-06-20,june_july_2024,-75.91645699,45.31004485,healthy
+9856,4940,Loblaws,363 Rideau Street,supermarket,large,152493242,2024-06-20,june_july_2024,-75.68389158,45.43015347,healthy
+10225,4941,Loblaws,1980 Baseline Road K2C 0C6,supermarket,large,157291437,2024-06-20,june_july_2024,-75.75948839,45.3519434,healthy
+4236,4942,Loblaws,1980 Ogilvie Road,supermarket,large,466704825,2024-06-20,june_july_2024,-75.61043477,45.43344668,healthy
+3265,4943,Loblaws,3201 Greenbank Road K2J 4H9,supermarket,large,470443608,2024-06-20,june_july_2024,-75.74335669,45.2680651,healthy
+749,4944,Loblaws,2210 Bank Street K1V 1J5,supermarket,large,485239248,2024-06-20,june_july_2024,-75.6566817,45.35744442,healthy
+7520,5248,Marche Adonis,1021 St-Laurent Boulevard,supermarket,large,68661910,2024-06-20,june_july_2024,-75.63700399,45.42732661,healthy
+4793,5651,Metro,"375 Daniel Street South, Arnprior K7S 3K6",supermarket,large,1339121915,2024-06-20,june_july_2024,-76.3684266,45.4249666,healthy
+3309,5667,Metro,"333 King Street East, Gananoque",supermarket,large,11244136049,2024-06-20,june_july_2024,-76.1578968,44.3317783,healthy
+147,5670,Metro,"333 King Street East, Gananoque",supermarket,large,42395071,2024-06-20,june_july_2024,-76.15788792,44.331767,healthy
+4368,5671,Metro,6473 Jeanne-d'Arc Boulevard North,supermarket,large,68577542,2024-06-20,june_july_2024,-75.53622456,45.48099531,healthy
+9796,5672,Metro,1675 Tenth Line Road K1E 3P6,supermarket,large,68577837,2024-06-20,june_july_2024,-75.49119062,45.47002577,healthy
+8758,5673,Metro,50 Beechwood Avenue K1L 8B3,supermarket,large,68586181,2024-06-20,june_july_2024,-75.67564268,45.43943449,healthy
+256,5674,Metro,250 Greenbank Road K2H 8X4,supermarket,large,68607808,2024-06-20,june_july_2024,-75.78019378,45.324231,healthy
+5380,5675,Metro,4048 Carling Avenue,supermarket,large,68609392,2024-06-20,june_july_2024,-75.90725303,45.33688549,healthy
+1075,5676,Metro,2261 Walkley Road,supermarket,large,68658594,2024-06-20,june_july_2024,-75.61926411,45.38949191,healthy
+2861,5678,Metro,345 Carleton Avenue K1Y 0K3,supermarket,large,152128866,2024-06-20,june_july_2024,-75.74051209,45.39839333,healthy
+7638,5680,Metro,NA,supermarket,large,203901893,2024-06-20,june_july_2024,-77.10088369,45.82838064,healthy
+325,5682,Metro,4510 Innes Road,supermarket,large,229623195,2024-06-20,june_july_2024,-75.48407096,45.46123535,healthy
+8749,5683,Metro,1811 Robertson Road,supermarket,large,231347341,2024-06-20,june_july_2024,-75.817259,45.33019694,healthy
+4878,5684,Metro,21 Richer Circle,supermarket,large,262403198,2024-06-20,june_july_2024,-75.08282018,45.30402119,healthy
+6276,5685,Metro,NA,supermarket,large,282839452,2024-06-20,june_july_2024,-77.67918623,45.48759762,healthy
+9591,5686,Metro,83 Raglan Street South,supermarket,large,289310582,2024-06-20,june_july_2024,-76.68570228,45.47370539,healthy
+8850,5689,Metro,237 King Street West,supermarket,large,412977371,2024-06-20,june_july_2024,-75.68956292,44.5863853,healthy
+9355,5691,Metro,3201 Strandherd Drive K2J 5N1,supermarket,large,470452626,2024-06-20,june_july_2024,-75.72132619,45.27450637,healthy
+8525,5693,Metro,3310 Mccarthy Road,supermarket,large,480073623,2024-06-20,june_july_2024,-75.67219492,45.35054206,healthy
+7701,5694,Metro,2636 Innes Road,supermarket,large,483073634,2024-06-20,june_july_2024,-75.56321966,45.430907,healthy
+8140,5695,Metro,1930 Montreal Road,supermarket,large,484009059,2024-06-20,june_july_2024,-75.59521399,45.44540985,healthy
+2827,5696,Metro,1705 Merivale Road,supermarket,large,573225447,2024-06-20,june_july_2024,-75.72809022,45.34499815,healthy
+7445,5697,Metro,754 Bank Street,supermarket,large,584484126,2024-06-20,june_july_2024,-75.68890994,45.40336513,healthy
+4044,5698,Metro,2515 Bank Street,supermarket,large,652110303,2024-06-20,june_july_2024,-75.64421331,45.35487511,healthy
+4469,5699,Metro,NA,supermarket,large,738704602,2024-06-20,june_july_2024,-76.25617417,44.90221737,healthy
+5247,5700,Metro,10 Cope Drive,supermarket,large,768964058,2024-06-20,june_july_2024,-75.86544211,45.28187015,healthy
+1461,5701,Metro,"2525 Carling Avenue, Ottawa K2B 7Z2",supermarket,large,1014117763,2024-06-20,june_july_2024,-75.78572108,45.36530773,healthy
+8463,6146,No Frills,127 Hastings Street North K0L 1C0,supermarket,large,903702054,2024-06-20,june_july_2024,-77.8551911,45.0620987,healthy
+10271,6147,No Frills,NA,supermarket,large,4783693116,2024-06-20,june_july_2024,-74.7031811,45.0278846,healthy
+8549,6148,No Frills,NA,supermarket,large,7495589981,2024-06-20,june_july_2024,-77.1457681,45.8309691,healthy
+2920,6149,No Frills,1226 Place-d'Orleans Drive K1C 7K3,supermarket,large,68577501,2024-06-20,june_july_2024,-75.52261441,45.47626149,healthy
+9742,6150,No Frills,680 O'Brien Road,supermarket,large,228853089,2024-06-20,june_july_2024,-76.6606024,45.4769477,healthy
+2396,6151,No Frills,39 Winners Circle K7S 3G9,supermarket,large,264797709,2024-06-20,june_july_2024,-76.3694953,45.42176587,healthy
+1090,6152,No Frills,"711 King Street East, Gananoque",supermarket,large,313032596,2024-06-20,june_july_2024,-76.14917786,44.33694441,healthy
+1796,6153,No Frills,NA,supermarket,large,699079990,2024-06-20,june_july_2024,-75.08640818,45.31343272,healthy
+6761,6154,No Frills,30 Iber Road,supermarket,large,839203628,2024-06-20,june_july_2024,-75.912698700000007,45.28074472,healthy
+2174,7195,Real Canadian Superstore,1972 Parkedale Avenue,supermarket,large,49041735,2024-06-20,june_july_2024,-75.68879938,44.61405745,healthy
+2228,7196,Real Canadian Superstore,190 Richmond Road,supermarket,large,84160579,2024-06-20,june_july_2024,-75.74750869,45.39438026,healthy
+8362,7197,Real Canadian Superstore,760 Eagleson Road,supermarket,large,138665005,2024-06-20,june_july_2024,-75.86656146,45.28275543,healthy
+10255,7198,Real Canadian Superstore,4270 Innes Road,supermarket,large,471898445,2024-06-20,june_july_2024,-75.49440049,45.45665268,healthy
+3662,7199,Real Canadian Wholesale Club,1435 Cyrville Road,supermarket,large,68657914,2024-06-20,june_july_2024,-75.61788962,45.42076307,healthy
+3699,7901,Sobeys,5150 Innes Road K4A 0G4,supermarket,large,172338766,2024-06-20,june_july_2024,-75.4560822,45.46944978,healthy
+2954,7902,Sobeys,840 March Road,supermarket,large,239213041,2024-06-20,june_july_2024,-75.93381583,45.35788516,healthy
+9812,7903,Sobeys,700 Terry Fox Drive,supermarket,large,449069356,2024-06-20,june_july_2024,-75.89613607,45.29222851,healthy
+1811,7904,Sobeys,2276 Tenth Line Road,supermarket,large,576883869,2024-06-20,june_july_2024,-75.48507367,45.45220962,healthy
+8435,NA,Walmart,"500 Earl Grey Dr, Kanata",grocery,smaller,NA,2024-07-02,june_july_2024,-75.91293,45.31068,healthy
+1779,9900,Walmart Supercentre,"1550 Prescott and Russell Road 17, Hawkesbury",supermarket,large,9922970400,2024-06-20,june_july_2024,-74.603943,45.5937762,healthy
+6088,9902,Walmart Supercentre,1942 Parkedale Avenue,supermarket,large,53246376,2024-06-20,june_july_2024,-75.68642018,44.61524563,healthy
+9510,9903,Walmart Supercentre,"420 Ninth Street West, Cornwall K6J 0B3",supermarket,large,92167538,2024-06-20,june_july_2024,-74.74298994,45.02369633,healthy
+3635,9904,Walmart Supercentre,NA,supermarket,large,125704139,2024-06-20,june_july_2024,-77.08101819,45.81783835,healthy
+7861,9907,Walmart Supercentre,NA,supermarket,large,167907929,2024-06-20,june_july_2024,-76.12537019,45.13351851,healthy
+4171,9908,Walmart Supercentre,1375 Baseline Road,supermarket,large,171268363,2024-06-20,june_july_2024,-75.73858858,45.36379567,healthy
+9492,9910,Walmart Supercentre,450 Industrial Avenue,supermarket,large,209257254,2024-06-20,june_july_2024,-75.6498796,45.41313472,healthy
+2035,9911,Walmart Supercentre,980 O'Brien Road,supermarket,large,228836883,2024-06-20,june_july_2024,-76.65539234,45.47964292,healthy
+8856,9912,Walmart Supercentre,"3001 Richelieu Street, Rockland",supermarket,large,231655414,2024-06-20,june_july_2024,-75.30588608,45.53212181,healthy
+5077,9913,Walmart Supercentre,"340 Colonnade Drive, Kemptville K0G 1J0",supermarket,large,242966107,2024-06-20,june_july_2024,-75.62911857,45.02902519,healthy
+4406,9914,Walmart Supercentre,5357 Fernbank Road,supermarket,large,255988547,2024-06-20,june_july_2024,-75.87232904,45.27519347,healthy
+5630,9916,Walmart Supercentre,100 Bayshore Drive,supermarket,large,437094876,2024-06-20,june_july_2024,-75.80522886,45.34797824,healthy
+7998,9917,Walmart Supercentre,3651 Strandherd Drive K2J 4G8,supermarket,large,450839128,2024-06-20,june_july_2024,-75.74078999,45.27175829,healthy
+8255,9918,Walmart Supercentre,1980 Ogilvie Road,grocery,smaller,466704822,2024-06-20,june_july_2024,-75.61060199,45.43139049,healthy
+6238,9919,Walmart Supercentre,3900 Innes Road,supermarket,large,472398054,2024-06-20,june_july_2024,-75.50850264,45.45133912,healthy
+3775,9920,Walmart Supercentre,2210 Bank Street K1V 1J6,supermarket,large,482653912,2024-06-20,june_july_2024,-75.6548461,45.35476984,healthy
+9859,9921,Walmart Supercentre,"114 Lombard Street, Smiths Falls",supermarket,large,489060904,2024-06-20,june_july_2024,-76.03280318,44.89228979,healthy
+9069,9922,Walmart Supercentre,2277 Riverside Drive,supermarket,large,605365786,2024-06-20,june_july_2024,-75.6794581,45.38516011,healthy
+1206,9995,Whole Foods Market,"951 Bank Street, Ottawa K1S 3W7",supermarket,large,3632278323,2024-06-20,june_july_2024,-75.68548,45.3993951,healthy
+6845,10115,Your Independent Grocer,296 Bank Street,supermarket,large,2213666893,2024-06-20,june_july_2024,-75.6964903,45.4150313,healthy
+8541,10116,Your Independent Grocer,"1560 Cameron Street, Hawkesbury K6A 3S5",supermarket,large,9922970401,2024-06-20,june_july_2024,-74.6012617,45.5931446,healthy
+4185,10117,Your Independent Grocer,200 Grant Carman Drive,supermarket,large,68608910,2024-06-20,june_july_2024,-75.73077771,45.35125919,healthy
+3679,10118,Your Independent Grocer,NA,supermarket,large,70800240,2024-06-20,june_july_2024,-75.5206453,44.72484404,healthy
+9864,10119,Your Independent Grocer,NA,supermarket,large,92168390,2024-06-20,june_july_2024,-74.73449392,45.03048859,healthy
+7632,10120,Your Independent Grocer,"455 McNeely Avenue, Carleton Place K7C 4S6",supermarket,large,167907930,2024-06-20,june_july_2024,-76.12135285,45.13423268,healthy
+1174,10121,Your Independent Grocer,401 Ottawa Street K0A 1A0,supermarket,large,176731001,2024-06-20,june_july_2024,-76.18218322,45.23388599,healthy
+4853,10122,Your Independent Grocer,753 Notre Dame Street,supermarket,large,228619179,2024-06-20,june_july_2024,-75.30401316,45.26896014,healthy
+3035,10123,Your Independent Grocer,2737 Laurier Street K4K 1A3,supermarket,large,447128719,2024-06-20,june_july_2024,-75.29856971,45.54138425,healthy
+8039,10124,Your Independent Grocer,1160 Beaverwood Road K4M 1A5,supermarket,large,470022440,2024-06-20,june_july_2024,-75.68305309,45.2225895,healthy
+4448,10125,Your Independent Grocer,5911 Perth Street,supermarket,large,470376943,2024-06-20,june_july_2024,-75.82896193,45.20310295,healthy
+1870,10126,Your Independent Grocer,"685 River Road, Ottawa K1V 2G2",supermarket,large,470835932,2024-06-20,june_july_2024,-75.69742016,45.27056271,healthy
+5241,10127,Your Independent Grocer,NA,supermarket,large,471137339,2024-06-20,june_july_2024,-77.26029577,45.88983415,healthy
+8330,10128,Your Independent Grocer,1251 Stittsville Main Street,supermarket,large,471797444,2024-06-20,june_july_2024,-75.92853395,45.26898725,healthy
+9928,10129,Your Independent Grocer,3777 Strandherd Drive K2J 4B1,supermarket,large,478366946,2024-06-20,june_july_2024,-75.74667764,45.26805833,healthy
+6588,10130,Your Independent Grocer,1910 St-Laurent Boulevard,supermarket,large,485194417,2024-06-20,june_july_2024,-75.62411287,45.39812673,healthy
+10272,10131,Your Independent Grocer,1619 Orleans Boulevard,supermarket,large,485685918,2024-06-20,june_july_2024,-75.52411388,45.45958293,healthy
+9467,10132,Your Independent Grocer,NA,supermarket,large,489060898,2024-06-20,june_july_2024,-76.0267762,44.89251578,healthy
+203,10133,Your Independent Grocer,2681 Alta Vista Drive,supermarket,large,578268905,2024-06-20,june_july_2024,-75.66305429,45.372271,healthy
+7131,10134,Your Independent Grocer,2241 Riverside Drive,supermarket,large,605371380,2024-06-20,june_july_2024,-75.67645875,45.38585743,healthy
+2257,10135,Your Independent Grocer,"2600 County Road 43, Kemptville K0G 1J0",supermarket,large,616359879,2024-06-20,june_july_2024,-75.6552323,45.01867793,healthy
+7309,10136,Your Independent Grocer,596 Montreal Road K1K 0T9,supermarket,large,620501508,2024-06-20,june_july_2024,-75.6432305,45.4411006,healthy
+1967,10137,Your Independent Grocer,NA,supermarket,large,637208403,2024-06-20,june_july_2024,-74.62962513,45.29937056,healthy
+1456,10138,Your Independent Grocer,NA,supermarket,large,688456482,2024-06-20,june_july_2024,-76.26615012,44.90790465,healthy
+7897,182,Africa World Market,1392 Cyrville Road,grocery,smaller,7302523711,2024-06-20,june_july_2024,-75.6216449,45.4205082,healthy
+3129,388,Arya Food Market,508 Gladstone Avenue,grocery,smaller,5952002193,2024-06-20,june_july_2024,-75.6982537,45.4100122,healthy
+5987,412,Athens Fresh Market,NA,grocery,smaller,6468639912,2024-06-20,june_july_2024,-75.9521207,44.6261649,healthy
+3075,468,B&H Your Community Grocer,301 Rideau Street,grocery,smaller,69590206,2024-06-20,june_july_2024,-75.64913781,45.01821208,healthy
+2759,830,Bombay Spices,565 West Hunt Club Road,grocery,smaller,713140766,2024-06-20,june_july_2024,-75.7290901,45.33558265,healthy
+4917,1244,Byward Fruit Market,36 By Ward Market Square K1N 7A2,specialty,fruit_vegetable_market,2804550723,2024-06-20,june_july_2024,-75.6929097,45.4276179,healthy
+5003,1482,Cardinal Fruits & Vegetables,"1232 Pembroke Street East, Pembroke K8A 7R9",grocery,smaller,352858805,2024-06-20,june_july_2024,-77.07106374,45.8111652,healthy
+6921,1589,Cedars & Co. Food Market,1255 Bank Street,grocery,smaller,307235093,2024-06-20,june_july_2024,-75.67988044,45.39100544,healthy
+9501,1934,Cloyne General Store,14265 Highway 41,grocery,smaller,521931535,2024-06-20,june_july_2024,-77.18583847,44.82014148,healthy
+596,3092,Farmer's Pick,1430 Prince Of Wales Drive,grocery,smaller,510976473,2024-06-20,june_july_2024,-75.7032904,45.3687326,healthy
+1060,3220,Foodsmiths,NA,grocery,smaller,743735626,2024-06-20,june_july_2024,-76.26130008,44.90673385,healthy
+3159,3272,Freshmart,", Killaloe",grocery,smaller,2396538693,2024-06-20,june_july_2024,-77.4152688,45.5527653,healthy
+1988,3273,Freshmart,NA,grocery,smaller,7058410858,2024-06-20,june_july_2024,-75.8803904,44.4778601,healthy
+2518,3274,Freshmart,NA,grocery,smaller,7061309881,2024-06-20,june_july_2024,-76.9853747,44.9566635,healthy
+10053,3275,Freshmart,NA,grocery,smaller,7343390954,2024-06-20,june_july_2024,-76.8609631,45.736545,healthy
+5339,3276,Freshmart,NA,grocery,smaller,7353187509,2024-06-20,june_july_2024,-76.2346753,44.4777635,healthy
+2432,3277,Freshmart,NA,grocery,smaller,231401295,2024-06-20,june_july_2024,-77.10043715,45.5404196,healthy
+6874,3278,Freshmart,NA,grocery,smaller,483465578,2024-06-20,june_july_2024,-78.71738356,46.30791488,healthy
+8659,3279,Freshmart,"Main Street, Elgin",grocery,smaller,521357450,2024-06-20,june_july_2024,-76.2216495,44.60882061,healthy
+3671,3280,Freshmart,NA,grocery,smaller,689534232,2024-06-20,june_july_2024,-76.01842505,44.40598145,healthy
+4049,3381,Geeland International Grocery,1620 Walkley Road,grocery,smaller,483702522,2024-06-20,june_july_2024,-75.64502256,45.37736999,healthy
+7585,3467,Glenburnie Grocery,NA,grocery,smaller,33979873,2024-06-20,june_july_2024,-76.502339,44.3208487,healthy
+4246,3557,Green Fresh,K1L 6P8,grocery,smaller,9929327317,2024-06-20,june_july_2024,-75.66274,45.4319515,healthy
+6618,3662,Harvest Moon Whole Foods,NA,specialty,health_food,4871057889,2024-06-20,june_july_2024,-77.8588816,45.0585605,healthy
+5017,3730,Herb & Spice,380 Bank Street,specialty,health_food,3671178015,2024-06-20,june_july_2024,-75.6948691,45.4138546,healthy
+6453,3735,HiFresh Foods,1486 Merivale Road,grocery,smaller,329505013,2024-06-20,june_july_2024,-75.7362128,45.35994195,healthy
+800,3886,Il Negozio Nicastro,792 Bank Street K1S 3V8,grocery,smaller,2078003979,2024-06-20,june_july_2024,-75.6884322,45.4028815,healthy
+5218,4276,Kowloon,712 Somerset Street West,grocery,smaller,1461227931,2024-06-20,june_july_2024,-75.7076334,45.4104822,healthy
+2720,4277,Kowloon Supermarket,NA,grocery,smaller,1019583761,2024-06-20,june_july_2024,-75.92701727,45.32306245,healthy
+5703,4284,Kudrinko's Country Grocer,22 Main Street K0G 1X0,grocery,smaller,495869632,2024-06-20,june_july_2024,-76.39567686,44.67910671,healthy
+2118,5204,Mangosteen,1742 Bank Street,grocery,smaller,2965310539,2024-06-20,june_july_2024,-75.665552,45.373855,healthy
+4577,5256,Marche Bonichoix,NA,grocery,smaller,286257811,2024-06-20,june_july_2024,-75.275411,45.2742092,healthy
+106,5347,Margo Fresh,564 Gladstone Avenue,grocery,smaller,342865923,2024-06-20,june_july_2024,-75.70008477,45.40925125,healthy
+8401,5746,Mid-East Foods,1010 Belfast Road K1G 4A2,grocery,smaller,2045639867,2024-06-20,june_july_2024,-75.6302422,45.4100972,healthy
+1229,5756,Mike Dean's Super Food,NA,grocery,smaller,443142013,2024-06-20,june_july_2024,-76.690606,44.7709662,healthy
+8670,5757,Mike Dean's Super Food,NA,grocery,smaller,7048032335,2024-06-20,june_july_2024,-75.2283661,45.1029419,healthy
+2170,5758,Mike Deans,NA,grocery,smaller,380404362,2024-06-20,june_july_2024,-75.15844483,45.43462222,healthy
+8092,6431,Parkdale Market,NA,specialty,fruit_vegetable_market,64881582,2024-06-20,june_july_2024,-75.72976047,45.40153314,healthy
+4043,6917,Portland Foodmarket,"28 Colborne Street, Portland K0G 1V0",grocery,smaller,7058395408,2024-06-20,june_july_2024,-76.1898315,44.6981246,healthy
+893,6976,Produce Depot,1855 Carling Avenue,grocery,smaller,68609654,2024-06-20,june_july_2024,-75.75693726,45.37684542,healthy
+4523,6977,Produce Depot,"2446 Bank Street, Ottawa K1V 1A4",grocery,smaller,483215218,2024-06-20,june_july_2024,-75.64536372,45.35251198,healthy
+7080,7832,Silk Road Foods,1620 Merivale Road,grocery,smaller,683005821,2024-06-20,june_july_2024,-75.7327464,45.34744094,healthy
+7006,7960,Spice World Supermarket,"62 Stonehaven Drive, Kanata K2M 2Y2",grocery,smaller,664536849,2024-06-20,june_july_2024,-75.85796765,45.29226295,healthy
+1702,8198,Stone Mill Family Market,672 County Road 4 West,grocery,smaller,9571997175,2024-06-20,june_july_2024,-77.0015913,44.4841747,healthy
+10009,9041,The Grocery Outlet,3026 Parkedale Avenue,grocery,smaller,267884540,2024-06-20,june_july_2024,-75.7071334,44.60023608,healthy
+7015,9058,The Indian Supermarket,474 Hazeldean Road,grocery,smaller,591034768,2024-06-20,june_july_2024,-75.88817113,45.29768266,healthy
+137,9786,Upland AFRI & Caribbean Store,1036 Merivale Road,grocery,smaller,548035599,2024-06-20,june_july_2024,-75.73361275,45.3788264,healthy
+1184,9811,Valu-mart,NA,supermarket,large,801555530,2024-06-20,june_july_2024,-77.4864669,46.1003532,healthy
+2652,9812,Valu-mart,NA,supermarket,large,3328541865,2024-06-20,june_july_2024,-77.682769,45.4889009,healthy
+2857,9813,Valu-mart,NA,supermarket,large,4530894348,2024-06-20,june_july_2024,-74.8867615,45.5570243,healthy
+2803,9815,Valu-mart,NA,supermarket,large,700747177,2024-06-20,june_july_2024,-75.18403468,44.90023653,healthy
+7944,10047,Wissam Fruits,888 Meadowlands Drive,grocery,smaller,561087165,2024-06-20,june_july_2024,-75.70276879,45.36734818,healthy
+3315,10164,Nu Zero Waste grocery store,"143 Main St Ottawa, ON, K1S 5V9",specialty,health_food,6516550381,2024-06-20,june_july_2024,-75.678210000000007,45.41006,healthy
+1092,10240,T&T Supermarket,224 Hunt Club Road,supermarket,large,447277025,2024-06-20,june_july_2024,-75.69017807,45.33404369,healthy
+2423,156,AR Foodmart,2914 Carling Avenue,specialty,cultural_grocer,5606069126,2024-06-20,june_july_2024,-75.8008334,45.3565888,healthy
+3946,181,Afri Market Place,808 Greenbank Road,specialty,cultural_grocer,478977109,2024-06-20,june_july_2024,-75.75664286,45.28679461,healthy
+5127,184,African Food Market,462 Hazeldean Road,specialty,cultural_grocer,603918530,2024-06-20,june_july_2024,-75.88739635,45.29804975,healthy
+3580,187,African Queen,2430 Bank Street,specialty,cultural_grocer,604059120,2024-06-20,june_july_2024,-75.64866563,45.35321524,healthy
+425,190,Afro-Carib Grocery,291 Palace Street,specialty,cultural_grocer,481375311,2024-06-20,june_july_2024,-75.66674573,45.43342844,healthy
+8180,191,Afro-Caribbean Groceries,1739 St-Laurent Boulevard,specialty,cultural_grocer,4354056194,2024-06-20,june_july_2024,-75.6260111,45.4054204,healthy
+1567,210,Al Basha,2434 St. Joseph Boulevard,specialty,cultural_grocer,5689366233,2024-06-20,june_july_2024,-75.5277792,45.4690445,healthy
+3997,212,Al Kalaa halal meat,557 Kirkwood Avenue,specialty,cultural_grocer,2450983254,2024-06-20,june_july_2024,-75.7428929,45.3891574,healthy
+5797,224,Al-Mokhtar Food Centre,383 McArthur Avenue,specialty,cultural_grocer,590304136,2024-06-20,june_july_2024,-75.6504433,45.43233191,healthy
+1258,250,Aljazeera Food Market,1101 Wellington Street West,specialty,cultural_grocer,2447686802,2024-06-20,june_july_2024,-75.725836,45.402849,healthy
+82,251,All Africa Market,411 McArthur Avenue,specialty,cultural_grocer,5994231113,2024-06-20,june_july_2024,-75.648431,45.4322775,healthy
+6105,275,Alsafeer Market,1656 Bank Street,specialty,cultural_grocer,292975326,2024-06-20,june_july_2024,-75.6669413,45.37645805,healthy
+350,278,Alta Juba Supermarket,2925 Albion Road North,specialty,cultural_grocer,5939864440,2024-06-20,june_july_2024,-75.6536874,45.373315,healthy
+10229,548,Barada Mart,NA,specialty,cultural_grocer,7752634551,2024-06-20,june_july_2024,-75.5922656,45.3190177,healthy
+10182,562,Barrhaven Market,2910 Woodroffe Avenue K2J 4G3,specialty,cultural_grocer,223407047,2024-06-20,june_july_2024,-75.72876862,45.29278464,healthy
+8772,568,Barwaaqo Food Centre,109 Mann Avenue,specialty,cultural_grocer,4751593993,2024-06-20,june_july_2024,-75.6723054,45.421239,healthy
+3574,697,Best Price Oriental Market,484 Hazeldean Road,specialty,cultural_grocer,622453067,2024-06-20,june_july_2024,-75.89022718,45.29581041,healthy
+7636,707,Bienvenidos Latin Market,1711 St-Laurent Boulevard K1G 3V4,specialty,cultural_grocer,6361519828,2024-06-20,june_july_2024,-75.6263648,45.4062649,healthy
+9706,1124,Bruham Food Mart,NA,grocery,smaller,1394961884,2024-06-20,june_july_2024,-77.1364395,45.8185032,healthy
+7120,1588,Cedars & Co Food Market,1793 Kilborn Avenue,grocery,smaller,2014628785,2024-06-20,june_july_2024,-75.6451832,45.3880457,healthy
+2162,1623,Charbonneau's Freshmart,"41 Post Street, Whitney",grocery,smaller,2454819335,2024-06-20,june_july_2024,-78.2392501,45.4929849,healthy
+5610,2437,Dandelion Foods,NA,specialty,health_food,3926137940,2024-06-20,june_july_2024,-76.181475,45.2350236,healthy
+1406,2531,Desi Food Market,2580 St. Joseph Boulevard,specialty,cultural_grocer,484551183,2024-06-20,june_july_2024,-75.52508485,45.47055207,healthy
+9276,2567,Divorsia Market,NA,specialty,cultural_grocer,4003120413,2024-06-20,june_july_2024,-75.7135428,45.3954474,healthy
+6694,2891,Eagle Lake Country Market,"2622 Eagle Lake Road, Eagle Lake K0M 1S0",grocery,smaller,520302736,2024-06-20,june_july_2024,-78.510180449999993,45.12900045,healthy
+7246,3204,Food Village,888 Meadowlands Drive,specialty,cultural_grocer,561087172,2024-06-20,june_july_2024,-75.70232514,45.36692408,healthy
+5367,3326,GB Caribbean Grocery,621 Center Street,specialty,cultural_grocer,583776651,2024-06-20,june_july_2024,-75.64260354,45.44162512,healthy
+7659,3380,Geeland Baguio Store,1020 St-Laurent Boulevard,specialty,cultural_grocer,607739742,2024-06-20,june_july_2024,-75.63980499,45.42756808,healthy
+5710,3528,Grab N' Eat Grocers,2910 Carling Avenue,specialty,cultural_grocer,3778731923,2024-06-20,june_july_2024,-75.8007052,45.3566405,healthy
+2716,3714,Health Advantage,NA,specialty,health_food,713174431,2024-06-20,june_july_2024,-77.07851616,45.81970914,healthy
+4539,3716,Healthy Planet,NA,specialty,health_food,6617010454,2024-06-20,june_july_2024,-78.3321984,44.3186166,healthy
+3104,3717,Healthy Planet,400 Earl Grey Drive,specialty,health_food,166691694,2024-06-20,june_july_2024,-75.91501429,45.31202368,healthy
+2124,3726,Henderson's Grocery,NA,grocery,smaller,2509684263,2024-06-20,june_july_2024,-74.5003408,45.1412343,healthy
+6687,3901,Indian Supermarket,1547 Merivale Road,specialty,cultural_grocer,10747336663,2024-06-20,june_july_2024,-75.7347949,45.3543668,healthy
+2369,3924,Istanbul Food Market,NA,specialty,cultural_grocer,10713275531,2024-06-20,june_july_2024,-75.5892457,45.4484453,healthy
+7158,4010,Jo Anne's Place,NA,specialty,health_food,6614740012,2024-06-20,june_july_2024,-78.3539931,44.28036,healthy
+188,4122,Kabul Food Market,355 Montreal Road,specialty,cultural_grocer,5667233875,2024-06-20,june_july_2024,-75.6549017,45.4387605,healthy
+3419,4150,Kardish,499 Terry Fox Drive K2T 1H7,specialty,health_food,567230329,2024-06-20,june_july_2024,-75.91963297,45.31110511,healthy
+3086,4151,Kardish,556 Montreal Road K1K 0T9,specialty,health_food,620501497,2024-06-20,june_july_2024,-75.64497181,45.44107886,healthy
+4490,4152,Kardish Food Centre,3054 Woodroffe Avenue K2J 4G3,specialty,health_food,303113274,2024-06-20,june_july_2024,-75.7244974,45.28409894,healthy
+2575,4263,Kool Runnings,2200 Montreal Road,specialty,cultural_grocer,668488638,2024-06-20,june_july_2024,-75.58699497,45.44947878,healthy
+1152,4266,Korems Food & Variety Store,1724 Montreal Road,specialty,cultural_grocer,592406687,2024-06-20,june_july_2024,-75.61062637,45.44580117,healthy
+604,4296,L&F Montego Place,2211 St. Joseph Boulevard,specialty,cultural_grocer,606804354,2024-06-20,june_july_2024,-75.53345555,45.46775997,healthy
+8915,4560,La Tiendita,848 Merivale Road,specialty,cultural_grocer,129435333,2024-06-20,june_july_2024,-75.73262562,45.38536847,healthy
+6422,4878,Lim Bangkok Grocery,794 Somerset Street West,grocery,smaller,5836676604,2024-06-20,june_july_2024,-75.710167,45.4095911,healthy
+5920,5043,M&J Tropical,1383 Clyde Avenue,specialty,cultural_grocer,5699786528,2024-06-20,june_july_2024,-75.7378283,45.3598258,healthy
+1038,5066,MC Halal Grocery,379 McArthur Avenue,specialty,cultural_grocer,464640504,2024-06-20,june_july_2024,-75.65057192,45.43229543,healthy
+1046,5069,MF Foodmart,848 Merivale Road,specialty,cultural_grocer,129435341,2024-06-20,june_july_2024,-75.73266847,45.38526149,healthy
+1901,5127,Magic Air Express,1014 Merivale Road,specialty,cultural_grocer,602785193,2024-06-20,june_july_2024,-75.73357133,45.37947028,healthy
+8371,5173,Mama Cora Latin Market,272 Montreal Road,specialty,cultural_grocer,3645234662,2024-06-20,june_july_2024,-75.6598885,45.4366319,healthy
+5648,5210,Manila Mart,2924 Carling Avenue,specialty,cultural_grocer,233903209,2024-06-20,june_july_2024,-75.80125249,45.35645031,healthy
+2867,5216,Manphong Supermarket,775 Somerset Street West,specialty,cultural_grocer,237120939,2024-06-20,june_july_2024,-75.70966937,45.4101445,healthy
+8497,5349,Mario's Food Centre,381 McArthur Avenue,specialty,cultural_grocer,464640503,2024-06-20,june_july_2024,-75.6505045,45.4323003,healthy
+1391,5431,Maya Market,197 Norice Street,specialty,cultural_grocer,5897278842,2024-06-20,june_july_2024,-75.753992,45.3396516,healthy
+1850,5629,Mercado Latino,67 Montreal Road,specialty,cultural_grocer,6015834720,2024-06-20,june_july_2024,-75.6680359,45.4337197,healthy
+5441,5867,Modern Thymes Natural Food,"11 Russell Street East, Smiths Falls K7A 1E7",specialty,health_food,9938314486,2024-06-20,june_july_2024,-76.0204301,44.9012689,healthy
+8709,5923,Morrocan Market Centre,2249 Carling Avenue,specialty,cultural_grocer,10922661358,2024-06-20,june_july_2024,-75.7742297,45.3692075,healthy
+9018,5935,Moussa Mini Market & Meat Shop,300 McArthur Avenue,specialty,cultural_grocer,4559290208,2024-06-20,june_july_2024,-75.6558856,45.4314506,healthy
+5266,6046,NU Grocery,143 Main Street,specialty,health_food,7961528864,2024-06-20,june_july_2024,-75.6783544,45.4101389,healthy
+9590,6068,Natural Food Pantry,1960 Scott Street,specialty,health_food,9126642017,2024-06-20,june_july_2024,-75.7502049,45.3965257,healthy
+2754,6070,Naturipe Food Market,"239 Portage Rd, Bolsover K0M 1B0",grocery,smaller,524079851,2024-06-20,june_july_2024,-79.0611518,44.52925445,healthy
+7476,6106,New Middleast Market,1753 Bank Street,specialty,cultural_grocer,6591809189,2024-06-20,june_july_2024,-75.6644742,45.3736971,healthy
+2221,6220,OK Mart,1508 Merivale Road,specialty,cultural_grocer,575369493,2024-06-20,june_july_2024,-75.73810044,45.35724681,healthy
+2949,6341,Ozon Turkish Market,500 Eagleson Road,specialty,cultural_grocer,591685226,2024-06-20,june_july_2024,-75.87047706,45.29113187,healthy
+4913,6585,Phuoc Loi Orient Grocery,791 Somerset Street West,specialty,cultural_grocer,2450668997,2024-06-20,june_july_2024,-75.7103712,45.4097848,healthy
+7355,7424,Rhema's,4380 Innes Road,specialty,cultural_grocer,5961954865,2024-06-20,june_july_2024,-75.4901491,45.4599002,healthy
+1307,7617,Savannah Afro Caribbean Products,1838 Bank Street,specialty,cultural_grocer,617092353,2024-06-20,june_july_2024,-75.66465202,45.37038444,healthy
+4417,7693,Seoul Mart,22 Pretoria Avenue,specialty,cultural_grocer,5541426830,2024-06-20,june_july_2024,-75.685284,45.4102893,healthy
+5239,7703,Shafie Food Centre,1990 Russell Road,specialty,cultural_grocer,5798967023,2024-06-20,june_july_2024,-75.6240276,45.4007448,healthy
+2251,7813,Shiraz Market,725 Somerset Street West,specialty,cultural_grocer,5836744321,2024-06-20,june_july_2024,-75.7084759,45.4105856,healthy
+3980,7814,Shirin Market,700 March Road,specialty,cultural_grocer,606521918,2024-06-20,june_july_2024,-75.92415842,45.35036724,healthy
+9949,7934,South Asian Supermarket,3059 Carling Avenue,specialty,cultural_grocer,5777078830,2024-06-20,june_july_2024,-75.807268,45.3545108,healthy
+1565,7959,Spice Divine,1541 Merivale Road,specialty,cultural_grocer,68608984,2024-06-20,june_july_2024,-75.73484846,45.35566199,healthy
+7758,8805,Tatka,1902 Robertson Road,specialty,cultural_grocer,4653911115,2024-06-20,june_july_2024,-75.8218614,45.3261353,healthy
+44,8862,Thana Markets,386 Bank Street,specialty,cultural_grocer,4636656659,2024-06-20,june_july_2024,-75.6949579,45.4135218,healthy
+1547,9098,The Main Ingredient,NA,specialty,health_food,7855771910,2024-06-20,june_july_2024,-78.3274523,44.3032239,healthy
+3328,9099,The Market,NA,grocery,smaller,472434361,2024-06-20,june_july_2024,-75.8352704,44.5056351,healthy
+1019,9100,The Market,NA,grocery,smaller,2411347629,2024-06-20,june_july_2024,-75.8575752,44.4890436,healthy
+1940,9101,The Market,NA,grocery,smaller,2411363156,2024-06-20,june_july_2024,-76.8048669,44.2797487,healthy
+9089,9102,The Market,NA,grocery,smaller,3459766250,2024-06-20,june_july_2024,-75.1289763,44.9445488,healthy
+1403,9137,The Pasta Shop,NA,grocery,smaller,7855613622,2024-06-20,june_july_2024,-78.3205096,44.3006136,healthy
+2832,9775,Uncle Ali's Super Market,3059 Carling Avenue,specialty,cultural_grocer,5777078829,2024-06-20,june_july_2024,-75.8073378,45.3546144,healthy
+2373,9793,Vaishali Superstore,62 Wylie Avenue,specialty,cultural_grocer,609966175,2024-06-20,june_july_2024,-75.80698154,45.35483065,healthy
+5868,9849,Village Food Mart,NA,grocery,smaller,5959563716,2024-06-20,june_july_2024,-75.2520078,45.3293388,healthy

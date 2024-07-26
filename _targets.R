@@ -33,5 +33,34 @@ list(
       sf::st_as_sf() |>
       dplyr::left_join(foodspace, by = "new_UID")
   ),
+
+  # save the coverage results to disk
+  targets::tar_target(
+    hood_grocer_cov,
+    get_hood_grocer_coverage(phhs = phhs, grocer_isos = grocer_isos)
+  ),
+  targets::tar_target(
+    save_analysis_2,
+    {
+      readr::write_csv(
+        dplyr::arrange(hood_grocer_cov, ONS_ID),
+        sprintf("output/analysis_2-hood-level-coverage-2-or-more-grocers-%s.csv", Sys.Date())
+      )
+      TRUE
+    }
+  ),
+
+  # save the set of grocers used also for confirmation
+  targets::tar_target(
+    save_analysis_2_grocers,
+    {
+      readr::write_csv(dplyr::filter(
+        foodspace,
+        type %in% c("grocery", "supermarket") |
+          subtype %in% c("health_food", "fruit_vegetable_market", "cultural_grocer")
+      ), sprintf("output/analysis_2-grocers-%s.csv", Sys.Date()))
+      TRUE
+    }
+  ),
   NULL
 )

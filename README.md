@@ -34,3 +34,8 @@ Q2: What percentage of households in each neighbourhood live within 10 mins walk
 • Find the healthy points within it
 ○ Count them!
 Get the ratio of unhealthy point count to total point count
+
+## CHANGE
+
+- Remove Nu Zero Waste Grocery Store, line 545
+- Re-run everything

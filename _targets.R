@@ -7,7 +7,7 @@ list(
   targets::tar_target(ons_shp, neighbourhoodstudy::ons_gen3_shp),
   targets::tar_target(phhs, load_big_phhs(cds = c("3501", "3502", "3506", "3507", "3509", "3547"), ons_shp = ons_shp)),
   targets::tar_target(foodspace, load_ontario_foods(
-    foodspace_filename = "data/Food_Environment_Analyses_pointdata_Shelley2024.csv",
+    foodspace_filename = "data/Food_Environment_Analyses_pointdata_Shelley2024-2024-08-06.csv",
     ontario_shp_filename = "~/datascience/data/spatial/lpr_000a21a_e/lpr_000a21a_e.shp"
   )),
   targets::tar_target(supermkt_isos, calculate_isochrones(dplyr::filter(foodspace, type == "supermarket"))),

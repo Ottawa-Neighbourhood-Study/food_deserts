@@ -280,8 +280,6 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
       !is.na(rurality)
     )
 
-  foodspace$type |> unique()
-
   unhealthy_pts <- dplyr::filter(
     foodspace,
     type %in% c("fast_food", "convenience", "retail_with_convenience")
@@ -306,7 +304,7 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
   # 13.2s with purrr
   # 4.3s furrr with 5 workers
   # 7.3 furrr with 10 workers
-  sf::sf_use_s2(FALSE)
+
 
   results <- inputs |>
     # dplyr::group_by(rurality) |>
@@ -318,7 +316,9 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
     dplyr::mutate(result = furrr::future_map(
       data,
       function(df, healthy_shp = healthy_pts, unhealthy_shp = unhealthy_pts) {
-        # print(df)
+        # move this switch into the mapped function
+        sf::sf_use_s2(FALSE)
+
         if (df$rurality == "rural") {
           costing <- "auto"
           distance <- 15
@@ -335,16 +335,24 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
         num_healthy <- NA
         num_unhealthy <- NA
 
-        iso <- try(valhallr::isochrone(from = df, costing = costing, contours = distance, hostname = "192.168.0.150") |>
+        iso <- try(valhallr::isochrone(
+          from = df,
+          costing = costing,
+          contours = distance,
+          hostname = "192.168.0.150"
+        ) |>
           sf::st_make_valid())
 
-        # create an error for testing...
-        # if (runif(n = 1) > 0.5) iso <- "something weird"
+        # ggplot() + geom_sf(data=iso, fill="green") + geom_sf(data = healthy_pts, colour = "red") + geom_sf(data = unhealthy_pts, colour = "blue") + geom_sf(data = sf::st_as_sf(df, coords=c("lon","lat"),crs="WGS84"), colour="black",shape=17,size=3)
+
+        # error handling
         num_unhealthy <- try(sf::st_filter(unhealthy_shp, iso) |> nrow())
         num_healthy <- try(sf::st_filter(healthy_shp, iso) |> nrow())
 
         if (!is.numeric(num_unhealthy)) num_unhealthy <- NA
         if (!is.numeric(num_healthy)) num_healthy <- NA
+
+        sf::sf_use_s2(TRUE)
 
         dplyr::tibble(num_unhealthy = num_unhealthy, num_healthy = num_healthy)
       },
@@ -355,10 +363,9 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
     suppressMessages()
 
   results
-  sf::sf_use_s2(TRUE)
+
   future::plan(future::sequential)
 
-  # object.size(results)
   results |>
     tidyr::unnest(cols = c(data))
-} # end function rfei_basic_calc()
+} # end function do_rfei_basic_calc()

@@ -73,5 +73,9 @@ list(
     rfei_dbs,
     do_rfei_basic_calc(db_centroids_snapped, foodspace)
   ),
+  targets::tar_target(
+    save_rfei_dbs,
+    readr::write_csv(rfei_dbs, paste0("output/rfei-dbs-", Sys.Date(), ".csv"))
+  ),
   NULL
 )

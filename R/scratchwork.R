@@ -144,3 +144,125 @@ inputs <- db_centroids_snapped |>
   sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84", remove = FALSE) |>
   sf::st_join(neighbourhoodstudy::ons_gen3_shp) |>
   dplyr::filter(dbpop2021 > 0)
+
+
+## explore db errors
+
+errors <- dplyr::filter(rfei_dbs, is.na(num_unhealthy) | is.na(num_healthy))
+
+dbs <- db_centroids_snapped |>
+  dplyr::filter(DBUID %in% errors$DBUID)
+
+do_rfei_basic_calc(dbs, foodspace)
+
+
+# explore moving to hood level measures
+library(sf)
+library(ggplot2)
+targets::tar_load(rfei_dbs)
+targets::tar_load(db_centroids_snapped)
+targets::tar_load(foodspace)
+ons_shp <- neighbourhoodstudy::ons_gen3_shp
+ons_shp
+rfei_dbs |>
+  dplyr::filter(num_unhealthy == 0 & num_healthy == 0)
+
+rfei_dbs |>
+  sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84", remove = FALSE) |>
+  ggplot() +
+  geom_sf(aes(colour = ONS_Name)) +
+  theme(legend.position = "none")
+
+rfei_dbs |>
+  dplyr::mutate(rfei_db = num_unhealthy / (num_unhealthy + num_healthy)) |>
+  dplyr::filter(is.nan(rfei_db)) |>
+  dplyr::slice_sample(n = 1) |>
+  dplyr::select(-num_unhealthy, -num_healthy, -rfei_db, -rurality, -dplyr::starts_with("ONS")) |>
+  do_rfei_basic_calc(foodspace)
+
+foodspace |>
+  sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84") |>
+  ggplot() +
+  geom_sf()
+sf::st_join(ons_shp)
+
+
+rfei_hoods <- rfei_dbs |>
+  dplyr::mutate(rfei_db = num_unhealthy / (num_unhealthy + num_healthy)) |>
+  dplyr::filter(!is.nan(rfei_db)) |>
+  dplyr::group_by(ONS_ID, ONS_Name) |>
+  dplyr::summarise(
+    rfei_hood = sum(rfei_db * dbpop2021) / sum(dbpop2021),
+    .groups = "drop"
+  )
+
+
+
+ons_shp |>
+  dplyr::filter(!ONS_ID %in% rfei_hoods$ONS_ID) |>
+  ggplot() +
+  geom_sf(aes(fill = "ONS_ID")) +
+  geom_sf(data = healthy_pts, colour = "red") +
+  geom_sf(data = unhealthy_pts, colour = "blue")
+
+
+ons_shp |>
+  dplyr::filter(!ONS_ID %in% rfei_hoods$ONS_ID) |>
+  leaflet::leaflet() |>
+  leaflet::addTiles() |>
+  leaflet::addPolygons() |>
+  leaflet::addMarkers(data = healthy_pts, label = "healthy") |>
+  leaflet::addMarkers(data = unhealthy_pts, label = "unhealthy")
+
+
+
+rfei_dbs |>
+  ggplot() +
+  geom_point(aes(x = num_unhealthy, y = num_healthy, colour = num_unhealthy / (num_unhealthy + num_healthy))) +
+  theme(legend.position = "bottom")
+
+rfei_dbs |>
+  ggplot() +
+  geom_point(aes(x = (num_unhealthy + num_healthy), y = num_unhealthy / (num_unhealthy + num_healthy)))
+
+
+rfei_dbs |>
+  ggplot() +
+  geom_point(aes(x = (num_unhealthy + num_healthy), y = num_unhealthy / num_healthy))
+
+
+rfei_dbs |>
+  dplyr::filter(num_unhealthy + num_healthy > 300)
+
+ons_shp |>
+  dplyr::filter(ONS_Name == "EDWARDS - CARLSBAD SPRINGS") |>
+  ggplot() +
+  geom_sf() +
+  geom_sf(data = healthy_pts, colour = "red") +
+  geom_sf(data = unhealthy_pts, colour = "blue")
+
+
+rfei_dbs |>
+  ggplot() +
+  geom_point(aes(x = (num_unhealthy + num_healthy), y = num_unhealthy / num_healthy, colour = rurality))
+
+# hood analysis
+rfei_hoods <- rfei_dbs |>
+  dplyr::mutate(rfei_db = num_unhealthy / (num_unhealthy + num_healthy)) |>
+  dplyr::filter(!is.nan(rfei_db)) |>
+  dplyr::group_by(ONS_ID, ONS_Name) |>
+  dplyr::summarise(
+    rfei_hood = sum(rfei_db * dbpop2021) / sum(dbpop2021),
+    .groups = "drop"
+  )
+
+library(leaflet)
+
+pal <- leaflet::colorNumeric(domain = rfei_hoods$rfei_hood, palette = "viridis")
+dplyr::left_join(ons_shp, rfei_hoods) |>
+  leaflet() |>
+  addTiles() |>
+  addPolygons(
+    fillColor = ~ pal(rfei_hood), fillOpacity = 0.8, weight = 1,
+    label = ~ paste0(ONS_Name, ": ", rfei_hood)
+  )

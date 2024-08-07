@@ -310,7 +310,7 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
 
   results <- inputs |>
     # dplyr::group_by(rurality) |>
-    dplyr::slice_head(n = 50) |>
+    # dplyr::slice_head(n = 50) |>
     dplyr::ungroup() |>
     tidyr::nest(data = -DBUID) |>
     # dplyr::slice(654) |>

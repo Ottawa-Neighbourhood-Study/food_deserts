@@ -193,3 +193,172 @@ get_hood_grocer_coverage <- function(phhs, grocer_isos) {
   results |>
     dplyr::mutate(pct_coverage = round(pct_coverage, digits = 3))
 } # end function get_phh_grocer_coverage()
+
+
+
+
+get_db_centroids_snapped_to_roads <- function() {
+  dbs <- sf::read_sf("~/datascience/data/spatial/ldb_000a21a_e/ldb_000a21a_e.shp") |>
+    dplyr::filter(PRUID == 35) |>
+    dplyr::mutate(CDUID = substr(DBUID, 0, 4)) |>
+    dplyr::filter(CDUID %in% c("3501", "3502", "3506", "3507", "3509", "3547")) |>
+    sf::st_transform(crs = "WGS84") |>
+    sf::st_make_valid() |>
+    sf::st_filter(sf::st_make_valid(sf::st_union(sf::st_make_valid(neighbourhoodstudy::ons_gen3_shp))))
+
+  dbpops <- readr::read_csv("~/datascience/data/spatial/geographic_attribute_file/2021_92-151_X.csv") |>
+    dplyr::mutate(DBUID = as.character(DBUID_IDIDU), .before = 1) |>
+    dplyr::filter(DBUID %in% dbs$DBUID) |>
+    dplyr::select(DBUID, dbpop2021 = DBPOP2021_IDPOP2021)
+
+  db_centroids <- dbs |>
+    sf::st_make_valid() |>
+    dplyr::left_join(dbpops, by = "DBUID") |>
+    dplyr::select(DBUID, dbpop2021) |>
+    sf::st_centroid() |>
+    sf::st_transform(crs = 32189) |>
+    suppressWarnings()
+
+  roads <- sf::st_union(pseudohouseholds::ottawa_roads_shp)
+
+  message("Loading Ontario roads...")
+  ontario_roads <-
+    sf::read_sf("~/datascience/data/spatial/lrnf000r21a_e/lrnf000r21a_e.shp",
+      query = 'SELECT CSDUID_L,CSDUID_R,NGD_UID,NAME,RANK,CLASS FROM "lrnf000r21a_e" WHERE
+                             ("PRNAME_L" = \'Ontario\' OR "PRNAME_R" = \'Ontario\') AND
+                             (
+								("CLASS" IN (\'20\',\'21\',\'22\',\'23\')) OR
+								("RANK" IN (\'4\',\'5\') AND "CLASS" IN (\'12\', \'13\')) OR
+								("RANK" = \'1\' AND NAME NOT LIKE \'4__%\')
+							 ) AND NAME IS NOT NULL'
+    )
+
+  cds <- c("3501", "3502", "3506", "3507", "3509", "3547")
+
+  roads <- ontario_roads |>
+    dplyr::mutate(CDUID_L = substr(CSDUID_L, 1, 4), CDUID_R = substr(CSDUID_R, 1, 4), .before = 1) |>
+    dplyr::filter(CDUID_L %in% cds | CDUID_R %in% cds) |>
+    sf::st_union()
+
+  roads <- sf::st_transform(roads, crs = 32189)
+
+  message("Snapping to road segments...")
+  step1 <- db_centroids %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(
+      linestring = sf::st_nearest_points(geometry, roads),
+      closest_point = sf::st_cast(linestring, "POINT")[seq(2, nrow(.) * 2, 2)]
+    )
+
+  step2 <- step1 |>
+    sf::st_drop_geometry() |>
+    dplyr::rename(geometry = closest_point) |>
+    dplyr::select(-linestring) |>
+    sf::st_as_sf() |>
+    sf::st_transform(crs = "WGS84")
+
+  step2 |>
+    dplyr::bind_cols(sf::st_coordinates(step2)) |>
+    dplyr::rename(lat = Y, lon = X) |>
+    sf::st_drop_geometry()
+} # end get_db_centroids_snapped_to_roads()
+
+
+
+
+
+# experimental function to get rfei requirements--healthy and unhealthy
+# food places within travel times of dbs
+do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
+  inputs <- db_centroids_snapped |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84", remove = FALSE) |>
+    sf::st_join(neighbourhoodstudy::ons_gen3_shp) |>
+    dplyr::filter(dbpop2021 > 0) |>
+    sf::st_drop_geometry() |>
+    dplyr::filter(
+      rurality != "excluded",
+      !is.na(rurality)
+    )
+
+  foodspace$type |> unique()
+
+  unhealthy_pts <- dplyr::filter(
+    foodspace,
+    type %in% c("fast_food", "convenience", "retail_with_convenience")
+  ) |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84") |>
+    dplyr::select(name, address)
+
+  healthy_pts <- dplyr::filter(
+    foodspace,
+    type %in% c("supermarket", "grocery", "health_food") |
+      subtype %in% c("health_food", "fruit_vegetable_market", "cultural_grocer")
+  ) |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84") |>
+    dplyr::select(name, address)
+
+  # (all fast_food, convenience, and retailer_with_convenience marked as “unhealthy”) /
+  #  (all supermarket, grocery, health_food, fruit_and_vegetable_market, and cultural_retailer marked as “healthy” + all fast_food, convenience, and retailer_with_convenience marked as “unhealthy”) within x distance of each household/DB within each neighbourhood
+
+
+  future::plan(future::multisession, workers = 5)
+
+  # 13.2s with purrr
+  # 4.3s furrr with 5 workers
+  # 7.3 furrr with 10 workers
+  sf::sf_use_s2(FALSE)
+
+  results <- inputs |>
+    # dplyr::group_by(rurality) |>
+    dplyr::slice_head(n = 50) |>
+    dplyr::ungroup() |>
+    tidyr::nest(data = -DBUID) |>
+    # dplyr::slice(654) |>
+    # dplyr::mutate(result = purrr::map(data, function(df) {
+    dplyr::mutate(result = furrr::future_map(
+      data,
+      function(df, healthy_shp = healthy_pts, unhealthy_shp = unhealthy_pts) {
+        # print(df)
+        if (df$rurality == "rural") {
+          costing <- "auto"
+          distance <- 15
+        } else if (df$rurality %in% c("town", "suburban")) {
+          costing <- "auto"
+          distance <- 10
+        } else if (df$rurality == "urban") {
+          costing <- "pedestrian"
+          distance <- 10
+        } else {
+          stop("Unknown rurality type")
+        }
+
+        num_healthy <- NA
+        num_unhealthy <- NA
+
+        iso <- try(valhallr::isochrone(from = df, costing = costing, contours = distance, hostname = "192.168.0.150") |>
+          sf::st_make_valid())
+
+        # create an error for testing...
+        # if (runif(n = 1) > 0.5) iso <- "something weird"
+        num_unhealthy <- try(sf::st_filter(unhealthy_shp, iso) |> nrow())
+        num_healthy <- try(sf::st_filter(healthy_shp, iso) |> nrow())
+
+        if (!is.numeric(num_unhealthy)) num_unhealthy <- NA
+        if (!is.numeric(num_healthy)) num_healthy <- NA
+
+        dplyr::tibble(num_unhealthy = num_unhealthy, num_healthy = num_healthy)
+      },
+      .progress = TRUE
+    )) |>
+    tidyr::unnest(result) |>
+    suppressWarnings() |>
+    suppressMessages()
+
+  results
+  sf::sf_use_s2(TRUE)
+  future::plan(future::sequential)
+
+  # object.size(results)
+  results |>
+    tidyr::unnest(cols = c(data))
+} # end function rfei_basic_calc()

@@ -115,3 +115,32 @@ grocer_isos |>
   leaflet::addTiles() |>
   leaflet::addCircleMarkers(data = dplyr::filter(phhs, rurality == "urban"), color = "red") |>
   leaflet::addPolygons()
+
+
+
+### LOOKING AT ISOCHRONES FOR DBS IN BIG ONS REGION
+library(sf)
+targets::tar_load(foodspace)
+targets::tar_load(db_centroids_snapped)
+
+
+db_centroids_snapped
+
+# ruralities <- neighbourhoodstudy::ons_gen3_shp |>
+# sf::st_drop_geometry() |>
+# dplyr::select(ONS_ID, rurality)
+
+
+# inputs <- db_centroids_snapped |>
+#   dplyr::mutate(DAUID = substr(DBUID, 1, 8)) |>
+#   dplyr::left_join(neighbourhoodstudy::sli_das_gen3_mape, by = "DAUID") |>
+#   dplyr::left_join(ruralities, by = "ONS_ID")
+
+
+
+
+#####
+inputs <- db_centroids_snapped |>
+  sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84", remove = FALSE) |>
+  sf::st_join(neighbourhoodstudy::ons_gen3_shp) |>
+  dplyr::filter(dbpop2021 > 0)

@@ -62,5 +62,16 @@ list(
       TRUE
     }
   ),
+
+  ## analysis 3: RFEI
+
+  targets::tar_target(
+    db_centroids_snapped,
+    get_db_centroids_snapped_to_roads()
+  ),
+  targets::tar_target(
+    rfei_dbs,
+    do_rfei_basic_calc(db_centroids_snapped, foodspace)
+  ),
   NULL
 )

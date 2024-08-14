@@ -470,3 +470,24 @@ do_rfei_sub_walk_calc <- function(db_centroids_snapped, foodspace) {
   results |>
     tidyr::unnest(cols = c(data))
 } # end function do_rfei_sub_walk_calc()
+
+
+
+
+# calculate population-weighted neighbourhood-level RFEI scores
+# RFEI here = % of accessible food spaces that are unhealthy, i.e.
+# (# accessible unhealthy ) / (# accessible unhealthy + # accessible healthy)
+# it is calculated at the db level, and then population-weighted up to the
+# neighbourhood level. in other words, each RFEI is multiplied by the DB's population,
+# then summed per neighbourhood, then divided by the total DB population.
+# so if 9 people have an RFEI of 1, and 1 has an RFEI of 0, the hood level will be
+# ( (9 x 1) + (1 x 0) ) / (10) = 9 / 10 = 0.9
+# I have  removed DBs with NO accessible food. there were roughly 3,300 of them.
+# This may not be the correct approach--if so the DB-level results are there as well.
+create_hood_popweighted_rfei <- function(rfei_dbs, rfei_sub_town_walk_dbs) {
+  dplyr::bind_rows(rfei_dbs, rfei_sub_town_walk_dbs) |>
+    dplyr::group_by(ONS_Name, ONS_Region, rurality, costing, distance) |>
+    dplyr::filter(!(num_unhealthy + num_healthy == 0)) |>
+    dplyr::mutate(rfei = num_unhealthy / (num_healthy + num_unhealthy)) |>
+    dplyr::summarise(rfei_popweight = sum(dbpop2021 * rfei) / sum(dbpop2021))
+} # end function create_hood_popweighted_rfei()

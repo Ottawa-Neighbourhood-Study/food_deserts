@@ -1,7 +1,8 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|6a0ae63b4d5df896|||||||||||||||
+.Random.seed|object|effa969a3f1f9b8d|||||||||||||||
 all_cov|stem|0f962410a160e2ac|ec29f0c7e747f290|1c29e51b5dadc2ae|-1774453436||t19941.59241805s|a162f684ccb7346e|3537|rds|local|vector|||0.002||
 calculate_isochrones|function|45a39911e11385af|||||||||||||||
+create_hood_popweighted_rfei|function|b86cf04ea3b4f5fb|||||||||||||||
 db_centroids_snapped|stem|f8c9336d26ba526e|6c1abfe08f72b314|cef3fcfe90d35f24|705285180||t19941.8132686198s|1449a6588b9e2e1d|298043|rds|local|vector|||317.256||
 do_rfei_basic_calc|function|7134cca0a866ce5d|||||||||||||||
 do_rfei_sub_walk_calc|function|dadc17e6a62cc3db|||||||||||||||
@@ -13,6 +14,7 @@ get_hood_grocer_coverage|function|c8625c1972e510a6|||||||||||||||
 get_phh_grocer_coverage|function|e858f9ffb14b2904|||||||||||||||
 grocer_isos|stem|0e53cf04a0d673da|57ff59e2b29c95aa|d92dc16079e83288|43184309||t19941.5924177722s|13189449ba63af18|10219564|rds|local|vector|||73.831||
 hood_grocer_cov|stem|ac19ec642c43d484|ccb72fdc88b2b7bb|3bd37fd64bfe9ce4|1976256898||t19941.5925472221s|d938ebcaecfb29b1|3056|rds|local|vector|||11.155||
+hood_popweighted_rfei|stem|ae17359beaf85d58|c502343ea55a4f1c|0f99fd18a43dd1a3|1726807534||t19949.8092736178s|bc698c3e422b1e00|5184|rds|local|vector|||0.529||
 load_big_phhs|function|04efebe14e6364c4|||||||||||||||
 load_ontario_foods|function|803d01ef8c7308ea|||||||||||||||
 ons_shp|stem|36fe2295974e9ac0|55e38b642e25f11f|2c530c1562a7fbd1|854065044||t19930.5915659278s|687959aa94eb58b9|1548651|rds|local|vector|||0.083||

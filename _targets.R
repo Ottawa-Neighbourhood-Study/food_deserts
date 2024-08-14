@@ -82,5 +82,10 @@ list(
     dplyr::bind_rows(rfei_dbs, rfei_sub_town_walk_dbs) |>
       readr::write_csv(paste0("output/rfei-dbs-", Sys.Date(), ".csv"))
   ),
+  targets::tar_target(
+    hood_popweighted_rfei,
+    create_hood_popweighted_rfei(rfei_dbs, rfei_sub_town_walk_dbs) |>
+      readr::write_csv(paste0("output/hood-popweighted-rfei-", Sys.Date(), ".csv"))
+  ),
   NULL
 )

@@ -272,7 +272,3 @@ dplyr::left_join(ons_shp, rfei_hoods) |>
 ####
 
 targets::tar_load(c(rfei_dbs, rfei_sub_town_walk_dbs))
-
-dplyr::bind_rows(rfei_dbs, rfei_sub_town_walk_dbs) |>
-  dplyr::group_by(ONS_Name, ONS_Region, rurality, costing, distance) |>
-  dplyr::summarise()

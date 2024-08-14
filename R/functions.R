@@ -354,7 +354,7 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
 
         sf::sf_use_s2(TRUE)
 
-        dplyr::tibble(num_unhealthy = num_unhealthy, num_healthy = num_healthy)
+        dplyr::tibble(num_unhealthy = num_unhealthy, num_healthy = num_healthy, costing = costing, distance = distance)
       },
       .progress = TRUE
     )) |>
@@ -369,3 +369,104 @@ do_rfei_basic_calc <- function(db_centroids_snapped, foodspace) {
   results |>
     tidyr::unnest(cols = c(data))
 } # end function do_rfei_basic_calc()
+
+
+
+
+# get rfei requirements for suburban and town
+# looking at 10 min pedestrian isochrones
+# food places within travel times of dbs
+do_rfei_sub_walk_calc <- function(db_centroids_snapped, foodspace) {
+  inputs <- db_centroids_snapped |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84", remove = FALSE) |>
+    sf::st_join(neighbourhoodstudy::ons_gen3_shp) |>
+    dplyr::filter(dbpop2021 > 0) |>
+    sf::st_drop_geometry() |>
+    dplyr::filter(
+      rurality %in% c("suburban", "town"),
+      !is.na(rurality)
+    )
+
+  unhealthy_pts <- dplyr::filter(
+    foodspace,
+    type %in% c("fast_food", "convenience", "retail_with_convenience")
+  ) |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84") |>
+    dplyr::select(name, address)
+
+  healthy_pts <- dplyr::filter(
+    foodspace,
+    type %in% c("supermarket", "grocery", "health_food") |
+      subtype %in% c("health_food", "fruit_vegetable_market", "cultural_grocer")
+  ) |>
+    sf::st_as_sf(coords = c("lon", "lat"), crs = "WGS84") |>
+    dplyr::select(name, address)
+
+  # (all fast_food, convenience, and retailer_with_convenience marked as “unhealthy”) /
+  #  (all supermarket, grocery, health_food, fruit_and_vegetable_market, and cultural_retailer marked as “healthy” + all fast_food, convenience, and retailer_with_convenience marked as “unhealthy”) within x distance of each household/DB within each neighbourhood
+
+
+  future::plan(future::multisession, workers = 5)
+
+  # 13.2s with purrr
+  # 4.3s furrr with 5 workers
+  # 7.3 furrr with 10 workers
+
+
+  results <- inputs |>
+    # dplyr::group_by(rurality) |>
+    # dplyr::slice_head(n = 50) |>
+    dplyr::ungroup() |>
+    tidyr::nest(data = -DBUID) |>
+    # dplyr::slice(654) |>
+    # dplyr::mutate(result = purrr::map(data, function(df) {
+    dplyr::mutate(result = furrr::future_map(
+      data,
+      function(df, healthy_shp = healthy_pts, unhealthy_shp = unhealthy_pts) {
+        # move this switch into the mapped function
+        sf::sf_use_s2(FALSE)
+
+        if (df$rurality %in% c("town", "suburban")) {
+          costing <- "pedestrian"
+          distance <- 10
+        } else {
+          stop("Unknown rurality type")
+        }
+
+        num_healthy <- NA
+        num_unhealthy <- NA
+
+        iso <- try(valhallr::isochrone(
+          from = df,
+          costing = costing,
+          contours = distance,
+          hostname = "192.168.0.150"
+        ) |>
+          sf::st_make_valid())
+
+        # ggplot() + geom_sf(data=iso, fill="green") + geom_sf(data = healthy_pts, colour = "red") + geom_sf(data = unhealthy_pts, colour = "blue") + geom_sf(data = sf::st_as_sf(df, coords=c("lon","lat"),crs="WGS84"), colour="black",shape=17,size=3)
+
+        # error handling
+        num_unhealthy <- try(sf::st_filter(unhealthy_shp, iso) |> nrow())
+        num_healthy <- try(sf::st_filter(healthy_shp, iso) |> nrow())
+
+        if (!is.numeric(num_unhealthy)) num_unhealthy <- NA
+        if (!is.numeric(num_healthy)) num_healthy <- NA
+
+        sf::sf_use_s2(TRUE)
+
+        dplyr::tibble(num_unhealthy = num_unhealthy, num_healthy = num_healthy, costing = costing, distance = distance)
+      },
+      .progress = TRUE
+    )) |>
+    tidyr::unnest(result) |>
+    suppressWarnings() |>
+    suppressMessages()
+
+  results
+
+  future::plan(future::sequential)
+
+  results |>
+    tidyr::unnest(cols = c(data))
+} # end function do_rfei_sub_walk_calc()

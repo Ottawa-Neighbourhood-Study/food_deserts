@@ -1,9 +1,10 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|0c1148106d28fd64|||||||||||||||
+.Random.seed|object|6a0ae63b4d5df896|||||||||||||||
 all_cov|stem|0f962410a160e2ac|ec29f0c7e747f290|1c29e51b5dadc2ae|-1774453436||t19941.59241805s|a162f684ccb7346e|3537|rds|local|vector|||0.002||
 calculate_isochrones|function|45a39911e11385af|||||||||||||||
 db_centroids_snapped|stem|f8c9336d26ba526e|6c1abfe08f72b314|cef3fcfe90d35f24|705285180||t19941.8132686198s|1449a6588b9e2e1d|298043|rds|local|vector|||317.256||
-do_rfei_basic_calc|function|0b1702dee71ed5f3|||||||||||||||
+do_rfei_basic_calc|function|7134cca0a866ce5d|||||||||||||||
+do_rfei_sub_walk_calc|function|dadc17e6a62cc3db|||||||||||||||
 foodspace|stem|22ac6eabb0395783|8cd66bded17d256d|b3d27751003475a2|-2063374816||t19941.590476302s|3c9cf49b656971b5|227098|rds|local|vector|||1.663||
 get_coverage|function|430e1706350bfcfa|||||||||||||||
 get_coverage_one|function|66a75d105d711779|||||||||||||||
@@ -16,11 +17,13 @@ load_big_phhs|function|04efebe14e6364c4|||||||||||||||
 load_ontario_foods|function|803d01ef8c7308ea|||||||||||||||
 ons_shp|stem|36fe2295974e9ac0|55e38b642e25f11f|2c530c1562a7fbd1|854065044||t19930.5915659278s|687959aa94eb58b9|1548651|rds|local|vector|||0.083||
 phhs|stem|0244c8f9963ef653|9ce65a2b8c50486d|8449443e8c7132a7|-1897570363||t19930.5916367162s|440e1d9bd734b6b2|1688563|rds|local|vector|||3.966||
-rfei_dbs|stem|1bb6da06eb49e944|da338cc351c4e003|5822f9581010465f|32736501||t19942.5457140883s|e32458cf7d8e52fb|323346|rds|local|vector|||648.487||
+rfei_dbs|stem|44124c668fd9b140|da338cc351c4e003|fe49d0c4b55794f6|32736501||t19949.8015682155s|e5195205f8056aba|327708|rds|local|vector|||651.524||
+rfei_sub_town_walk_dbs|stem|7ae5847da61a2467|c2fd61d48bfa9805|4537b954cb28c4ed|-167345012||t19949.8025847678s|9b1ff964e08b9d9a|117291|rds|local|vector|||87.773||
 rural_cov|stem|b00bc7b80a37972f|fc5fe179860247bd|9dec6aa44f74ddbc|-1007178222||t19941.5915156512s|f01ec0a9d33f4404|1433|rds|local|vector|||4.427||
 save|stem|055c5f99272a555e|92bfda20c94020a5|d587118d38562ca5|117534681||t19941.5925474073s|ba41eabafff2540f|48|rds|local|vector|||0.009||
 save_analysis_2|stem|055c5f99272a555e|ca2f7b78bd18f6c3|a8a0c587bce0ff15|-291455961||t19941.5925476388s|ba41eabafff2540f|48|rds|local|vector|||0.013||
 save_analysis_2_grocers|stem|055c5f99272a555e|91c81e6b0717f0b0|80c0bdc8c77fe867|-1487651367||t19941.5914293513s|ba41eabafff2540f|48|rds|local|vector|||0.022||
+save_rfei_dbs|stem|9da6e6592b9bf1fa|64efcecc85d7084e|ed4d728024c0e913|-1550340771||t19949.8041010483s|8875f2091abcae78|436003|rds|local|vector|||0.464||
 suburban_cov|stem|ca3e9971ef4dce97|32cd453a2254f3a1|9dec6aa44f74ddbc|-238581675||t19941.5914643527s|867853dbcd36c4f1|947|rds|local|vector|||2.588||
 supermkt_isos|stem|4aecb09825350efd|6e08e070b3beb747|46c415b859fb931e|2096927357||t19941.5914288883s|2dc5c7398117e691|5586922|rds|local|vector|||81.382||
 town_cov|stem|376f35930dceeaec|4be1248d264b95f7|9dec6aa44f74ddbc|448171920||t19941.5915407911s|266c0e3d4338ce52|437|rds|local|vector|||2.163||

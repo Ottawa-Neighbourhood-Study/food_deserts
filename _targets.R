@@ -74,8 +74,13 @@ list(
     do_rfei_basic_calc(db_centroids_snapped, foodspace)
   ),
   targets::tar_target(
+    rfei_sub_town_walk_dbs,
+    do_rfei_sub_walk_calc(db_centroids_snapped, foodspace)
+  ),
+  targets::tar_target(
     save_rfei_dbs,
-    readr::write_csv(rfei_dbs, paste0("output/rfei-dbs-", Sys.Date(), ".csv"))
+    dplyr::bind_rows(rfei_dbs, rfei_sub_town_walk_dbs) |>
+      readr::write_csv(paste0("output/rfei-dbs-", Sys.Date(), ".csv"))
   ),
   NULL
 )

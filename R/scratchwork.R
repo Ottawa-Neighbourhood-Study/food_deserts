@@ -266,3 +266,13 @@ dplyr::left_join(ons_shp, rfei_hoods) |>
     fillColor = ~ pal(rfei_hood), fillOpacity = 0.8, weight = 1,
     label = ~ paste0(ONS_Name, ": ", rfei_hood)
   )
+
+
+
+####
+
+targets::tar_load(c(rfei_dbs, rfei_sub_town_walk_dbs))
+
+dplyr::bind_rows(rfei_dbs, rfei_sub_town_walk_dbs) |>
+  dplyr::group_by(ONS_Name, ONS_Region, rurality, costing, distance) |>
+  dplyr::summarise()
